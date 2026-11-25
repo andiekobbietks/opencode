@@ -8,6 +8,46 @@
   </a>
 </p>
 <p align="center">The open source AI coding agent.</p>
+
+> [!NOTE]
+> **Independent fork notice:** This repository is an independently maintained fork of [OpenCode](https://github.com/anomalyco/opencode), maintained by [AndieKobbieTech™](https://github.com/andiekobbietks) as part of the wider Andrea Kwabena Technologies engineering ecosystem. It is not an official OpenCode project, is not produced by Anomaly, and is not endorsed by or affiliated with the upstream OpenCode team. OpenCode and related upstream marks belong to their respective owners. This fork does not claim ownership of the upstream project, its name, logo, code, or trademarks.
+
+## Why this fork exists
+
+This fork provides a controlled development and integration surface for exploring how an extensible coding agent can support the wider AndieKobbieTech™ ecosystem. The aim is not to recreate or claim the upstream OpenCode product. It is to maintain a usable upstream-derived foundation, evaluate integrations, and develop agent-assisted engineering workflows while keeping project-specific tools modular and independently governed.
+
+The direction behind this work is to use OpenCode as an **operational interface for agentic engineering**: a place where a developer can work with code, invoke tools, inspect project context, and connect specialised workflows. The fork makes those integrations testable and controllable without making every ecosystem project a permanent modification to OpenCode itself.
+
+## The wider engineering ecosystem
+
+The names below identify separate projects, tools, or initiatives. They are not all components of this repository, and their inclusion here does not imply that they are bundled with OpenCode.
+
+| Project / identity | What it is for | Relationship to this fork |
+|---|---|---|
+| **Andrea Kwabena Technologies** | The wider technology consultancy and engineering umbrella. | Parent business context for the work. |
+| **AndieKobbieTech™** | The public-facing technical identity and shorthand for Andrea Kwabena Technologies. | Maintainer identity for this independent fork. |
+| **OpenCode** | The upstream open-source coding-agent foundation. | The project this repository forks; upstream ownership and direction remain with its maintainers. |
+| **AKCloud™** | A sovereign-minded cloud and infrastructure operations initiative, focused on deployable services, infrastructure management, and practical operations for smaller organisations. | A potential environment for agent-assisted infrastructure workflows; integrations should use explicit permissions and policy controls. |
+| **ASAL™** | Andie's software assurance and security tooling direction, including scanner/CLI capabilities and agent-facing integration. | Intended to provide assurance checks and structured feedback within development workflows, without treating an AI agent's output as proof of security. |
+| **AgentSON™** | A structured agent-event and observability initiative, using typed, machine-readable event records to make agent activity easier to inspect and audit. | A potential event/provenance layer around agent workflows; it is not an OpenCode replacement. |
+| **ManusArchive** | A project to organise and retrieve exported Manus task history, execution records, and related artefacts. | A potential source of project context and historical knowledge for an agent, subject to access controls and data minimisation. |
+| **Mind the Gap™** | A privacy-first recruitment and opportunity-mapping concept, including structured matching and evidence-led workflows. | A separate product initiative; not part of this fork. |
+| **ClinicDx** | A separate research and product codebase exploring structured, evidence-led decision workflows. | A source of architectural learning, not an OpenCode component. |
+
+### Design principles
+
+- **Keep the upstream relationship clear.** Preserve attribution and upstream licensing; do not imply that this fork is the official OpenCode distribution.
+- **Prefer modular integrations.** Keep specialised tools and services outside the core agent where practical, connecting them through documented interfaces, plugins, CLI tools, or other explicit integration points.
+- **Make agent actions inspectable.** Prefer traceable tool calls, structured events, logs, and reviewable changes over opaque automation.
+- **Apply least privilege.** Infrastructure, repositories, credentials, and external services should only be accessible through narrowly scoped permissions and deliberate approval boundaries.
+- **Separate advice from execution.** Planning and analysis should be distinguishable from actions that modify code, infrastructure, or external systems.
+- **Keep humans accountable for consequential changes.** Tests, security checks, code review, and deployment approval remain important; an AI agent does not replace them.
+- **Treat this as an evolving integration surface.** Not every proposed integration is implemented, production-ready, or enabled by default.
+
+### Trademark and project-name note
+
+The ™ symbol is used here to identify project and brand names associated with this ecosystem; it does **not** by itself mean that a name is registered as a trademark. No claim of registration is made by this README. Third-party names and marks, including OpenCode, remain the property of their respective owners. Project names in this table describe intended scope and direction, not a claim that every project is shipped in this repository.
+
 <p align="center">
   <a href="https://opencode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
   <a href="https://www.npmjs.com/package/@opencode/cli"><img alt="npm" src="https://img.shields.io/npm/v/@opencode/cli?style=flat-square" /></a>
