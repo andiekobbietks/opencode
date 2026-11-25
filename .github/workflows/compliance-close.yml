@@ -8,12 +8,14 @@ on:
 
 permissions:
   contents: read
-  issues: write
-  pull-requests: write
 
 jobs:
   close-non-compliant:
     if: github.repository == 'anomalyco/opencode'
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Close non-compliant issues and PRs after 72 hours
