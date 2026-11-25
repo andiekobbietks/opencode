@@ -12,11 +12,13 @@ on:
 
 permissions:
   contents: read
-  packages: write
 
 jobs:
   build:
     if: github.repository == 'anomalyco/opencode'
+    permissions:
+      contents: read
+      packages: write
     runs-on: blacksmith-4vcpu-ubuntu-2404
     env:
       REGISTRY: ghcr.io/${{ github.repository_owner }}
