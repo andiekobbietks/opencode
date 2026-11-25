@@ -1,7 +1,7 @@
 name: nix-hashes
 
 permissions:
-  contents: write
+  contents: read
 
 on:
   workflow_dispatch:
@@ -26,6 +26,7 @@ jobs:
   # Native runners required: bun install cross-compilation flags (--os/--cpu)
   # do not produce byte-identical node_modules as native installs.
   compute-hash:
+    if: github.repository == 'anomalyco/opencode'
     strategy:
       fail-fast: false
       matrix:
@@ -88,7 +89,10 @@ jobs:
           retention-days: 1
 
   update-hashes:
+    if: github.repository == 'anomalyco/opencode'
     needs: compute-hash
+    permissions:
+      contents: write
     if: github.event_name != 'pull_request'
     runs-on: blacksmith-4vcpu-ubuntu-2404
 
